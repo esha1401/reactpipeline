@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/Avinash739jecrc/reactapprepo.git', branch: 'main'
+                git url: 'https://github.com/Esha739jecrc/reactapprepo.git', branch: 'main'
             }
         }
 
