@@ -1,12 +1,9 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'node18'
-    }
-
     environment {
         CI = 'false'
+        PATH = "${tool 'node18'}/bin:${env.PATH}" // Optional: If you configured NodeJS tool manually
     }
 
     stages {
