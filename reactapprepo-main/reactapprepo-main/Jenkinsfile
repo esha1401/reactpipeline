@@ -3,16 +3,9 @@ pipeline {
 
     environment {
         CI = 'false'
-        PATH = "${tool 'node18'}/bin:${env.PATH}" // Optional: If you configured NodeJS tool manually
     }
 
     stages {
-        stage('Clone') {
-            steps {
-                git url: 'https://github.com/Avinash739jecrc/reactapprepo.git', branch: 'main'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
